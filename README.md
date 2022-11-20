@@ -1,5 +1,8 @@
 # KDeepFashion Project - Pinsage 
 
+### Paper
+- https://arxiv.org/pdf/1806.01973.pdf
+
 ### Original git Repo
 - https://github.com/dmlc/dgl/tree/master/examples/pytorch/pinsage
 
