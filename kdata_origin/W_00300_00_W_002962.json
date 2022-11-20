@@ -1,0 +1,36 @@
+{
+	"E_id": 2962,
+	"imgName": "W_00300_00_W.jpg",
+	"item": {
+		"imgName": "W_00300_00_W.jpg",
+		"era": 2000,
+		"style": "2000W",
+		"gender": "W",
+		"survey": {
+			"Q1": 2,
+			"Q2": 2,
+			"Q3": [
+				"None",
+				"None",
+				"None"
+			],
+			"Q4": 1,
+			"Q5": [
+				5,
+				4,
+				"None"
+			]
+		}
+	},
+	"user": {
+		"R_id": 3109,
+		"r_gender": 2,
+		"age": 4,
+		"mar": 2,
+		"child": 2,
+		"edu": 3,
+		"job": 5,
+		"income": 4,
+		"fa_expend": 3
+	}
+}
