@@ -151,7 +151,7 @@ def train(data_dict, args):
                 h_item = evaluation.get_all_emb(gnn, g.ndata['id'][item_ntype], 
                                                 data_dict['textset'], item_ntype, neighbor_sampler, args.batch_size, device)
                 item_batch = evaluation.item_by_user_batch(g, user_ntype, item_ntype, user_to_item_etype, timestamp, args)
-
+                print('\033[93m' + f'----Embedding Creation Successful----' + '\033[0m')
                 recalls = 0#[]
                 hitrates = 0
                 users = []
@@ -162,7 +162,8 @@ def train(data_dict, args):
                          metric = 'cosine',
                         )#cosine
                 model.fit(h_item.detach().cpu().numpy())
-                for i, nodes in enumerate(item_batch):
+                print('\033[93m' + f'----KNN fitting successful----' + '\033[0m')
+                for i, nodes in tqdm(enumerate(item_batch)):
                     # 실제 유저 ID 탐색
                     category = nid_uid_dict[i]
                     user_id = data_dict['user_category'][category]  # 실제 유저 id
@@ -212,18 +213,18 @@ def train(data_dict, args):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_entire8.pkl")
+    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_8.pkl")
     parser.add_argument('-s', '--save-path', type=str, default='./model/model')
     parser.add_argument('--random-walk-length', type=int, default=2)
     parser.add_argument('--random-walk-restart-prob', type=float, default=0.5)
     parser.add_argument('--num-random-walks', type=int, default=10)
-    parser.add_argument('--num-neighbors', type=int, default=10)
-    parser.add_argument('--num-layers', type=int, default=6)
+    parser.add_argument('--num-neighbors', type=int, default=5)
+    parser.add_argument('--num-layers', type=int, default=2)
     parser.add_argument('--hidden-dims', type=int, default=1024) # 128
     parser.add_argument('--batch-size', type=int, default=64)
     parser.add_argument('--device', type=str, default='cuda:0')  # 'cpu' or 'cuda:N'
-    parser.add_argument('--num-epochs', type=int, default=800)
-    parser.add_argument('--batches-per-epoch', type=int, default=5000)
+    parser.add_argument('--num-epochs', type=int, default=80)
+    parser.add_argument('--batches-per-epoch', type=int, default=10000)
     parser.add_argument('--num-workers', type=int, default=0)
     parser.add_argument('--lr', type=float, default=3e-5)
     parser.add_argument('--eval-epochs', type=int, default=1)

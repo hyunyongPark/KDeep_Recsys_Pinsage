@@ -149,8 +149,8 @@ def valid(data_dict, args):
         label = data_dict['testset'][user_id]
         users.append(user_id)
 
-        item = evaluation.node_to_item(nodes, nid_wid_dict, data_dict['item_category'])  # 와인 ID
-        label_idx = [i for i, x in enumerate(item) if x in label]  # 라벨 인덱스
+        item = evaluation.node_to_item(nodes, nid_wid_dict, data_dict['item_category'])
+        label_idx = [i for i, x in enumerate(item) if x in label]
         nodes = [x for i, x in enumerate(nodes)if i not in label_idx]
         h_nodes = h_item[nodes]
         h_center = torch.mean(h_nodes, axis=0) 
@@ -173,7 +173,7 @@ def valid(data_dict, args):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_entire9.pkl")
+    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_entire8.pkl")
     parser.add_argument('-s', '--model-path', type=str, default="./model_first/model_20epoch")
     parser.add_argument('--random-walk-length', type=int, default=2)
     parser.add_argument('--random-walk-restart-prob', type=float, default=0.5)
@@ -207,12 +207,4 @@ if __name__ == '__main__':
             'item_category': dataset['item-category']
         }
     
-    # Training
     valid(data_dict, args)
-
-
-#     torch.save({'epoch': epoch,
-#                 'model_state_dict': gnn.state_dict(),
-#                 'optimizer_state_dict': opt.state_dict(),
-#                 'loss': loss},
-#                args.save_path + '_' + str(epoch) + 'epoch.pt')
