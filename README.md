@@ -9,12 +9,12 @@
 <table>
     <thead>
         <tr>
-            <td>GraphRec Model Architecture</td>
+            <td>Pinsage Model Architecture</td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/kdeepfashion_RecSys/blob/main/img/model.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture.PNG"/></td>
         </tr>
     </tbody>
 </table>
