@@ -10,16 +10,16 @@
     <thead>
         <tr>
             <td>Pinsage Model Architecture</td>
+            <td>Pinsage Minibatch Process</td>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture3.PNG"/></td>
         </tr>
     </tbody>
 </table>
-
-
 
 ### Build Docker Image & 
 ```
