@@ -69,18 +69,26 @@ pip install -r requirements.txt
 
 
 ### 학습 weight file 다운로드 
-아래의 링크를 통해 학습 weight 파일을 다운받습니다. 
-해당 파일은 kdeepfashion 데이터셋을 학습한 trained file입니다.
-해당 weight 파일은 "./model_kfashion_add_externel" 에 위치하도록 합니다.  
+Download the trained weight file through the link below.
+This file is a trained file that learned the k-deep fashion dataset.
+Ensure that the weight file is located at "model/".
 - https://drive.google.com/drive/folders/1tTCoCYQBNi-4dfTqwfa8LU6UJeTE41-r?usp=sharing
 
 The testing cmd is: 
 ```
 
-python3 GraphRec-kfashion_Inference.py --RUN test
+python3 validation-kdeep.py --RUN test
 
 ```
 
+If you want to proceed with the new learning, adjust the parameters and set the directory and proceed with the command below.
+
+The Training cmd is:
+```
+
+python3 training-kdeep.py --RUN test
+
+```
 
 
 ### Result
