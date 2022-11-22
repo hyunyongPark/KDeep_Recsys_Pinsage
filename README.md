@@ -94,20 +94,6 @@ python3 training-kdeep.py
 
 
 ### Result
-<table>
-    <thead>
-        <tr>
-            <td>training Plot</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://github.com/hyunyongPark/kdeepfashion_RecSys/blob/main/model_kfashion_add_externel/training_result.png"/></td>
-        </tr>
-    </tbody>
-</table>
-
-
 - Our Model Performance Table
 
 |Embedding|Dataset|RMSE-Score|
@@ -133,25 +119,12 @@ python3 training-kdeep.py
 <table>
     <thead>
         <tr>
-            <td>HR@10 Score</td>
+            <td>HR@K(=500) Score</td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/kdeepfashion_RecSys/blob/main/img/refer_carca.png"/></td>
-        </tr>
-    </tbody>
-</table>
-
-<table>
-    <thead>
-        <tr>
-            <td>RMSE Score</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://github.com/hyunyongPark/kdeepfashion_RecSys/blob/main/img/paper_result.png"/></td>
+            <td><img src=""/></td>
         </tr>
     </tbody>
 </table>
