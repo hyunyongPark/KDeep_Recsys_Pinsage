@@ -1,11 +1,11 @@
 # KDeepFashion Project - Pinsage 
 
-### Paper
+### Reference
 - https://arxiv.org/pdf/1806.01973.pdf
-
-### Original git Repo
 - https://github.com/dmlc/dgl/tree/master/examples/pytorch/pinsage
 
+
+### Model Description 
 <table>
     <thead>
         <tr>
@@ -23,7 +23,7 @@
     </tbody>
 </table>
 
-### Build Docker Image & 
+### Build Docker Image
 ```
 # Build Docker Image
 sudo docker build -t graphrec:v1 .
