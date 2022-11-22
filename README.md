@@ -10,12 +10,14 @@
     <thead>
         <tr>
             <td>Pinsage Model Architecture</td>
+            <td>Pinsage Training Process</td>
             <td>Pinsage Minibatch Process</td>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture2.PNG"/></td>
             <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture3.PNG"/></td>
         </tr>
     </tbody>
@@ -156,7 +158,7 @@ python3 training-kdeep.py --RUN test
 
 ### References
 
-- https://www.ismll.uni-hildesheim.de/pub/pdfs/Ahmed_RecSys19.pdf
-- https://github.com/ahmedrashed-ml/GraphRec
-- https://arxiv.org/abs/2204.06519
+- https://arxiv.org/pdf/1806.01973.pdf
+- https://github.com/dmlc/dgl/tree/master/examples/pytorch/pinsage
+- 
 
