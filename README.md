@@ -128,10 +128,3 @@ python3 training-kdeep.py
         </tr>
     </tbody>
 </table>
-
-### References
-
-- https://arxiv.org/pdf/1806.01973.pdf
-- https://github.com/dmlc/dgl/tree/master/examples/pytorch/pinsage
-- 
-
