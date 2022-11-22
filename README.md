@@ -107,11 +107,10 @@ python3 training-kdeep.py
 ### Result
 - Our Model Performance Table
 
-|Embedding|Dataset|RMSE-Score|
+|Embedding|Dataset|HR@K(=500)|
 |---|---|---|
-|Graph|train(9,373)/valid(1,042)|*0.9711*|
-|Graph + User + Item|train(9,373)/valid(1,042)|*0.8357*|
-|Graph + User + Item|train(20,123)/valid(2,516)|**0.7813**|
+|Graph + Item meta|train(9,373)/valid(1,042)|*0.8357*|
+|Graph + Item meta|train(20,123)/valid(2,516)|**0.7813**|
 
 <table>
     </thead>
