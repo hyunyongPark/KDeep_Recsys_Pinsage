@@ -25,14 +25,14 @@
 
 ### Build Docker Image & 
 ```
-# 도커이미지 빌드
+# Build Docker Image
 sudo docker build -t graphrec:v1 .
-# 생성된 도커이미지 확인
+# Check generated Docker Image
 sudo docker images
 ```
 
 ```
-# 생성된 도커이미지 실행
+# Run generated docker image
 sudo docker run graphrec:v1
 ```
 - Result
@@ -67,10 +67,10 @@ conda activate your_prjname
 cd {The virtual environment directory that you created}
 pip install -r requirements.txt
 ```
-- your_prjname : 생성할 가상환경 이름
+- your_prjname : Name of the virtual environment to create
 
 
-### 학습 weight file 다운로드 
+### Trained weight file Download 
 Download the trained weight file through the link below.
 This file is a trained file that learned the k-deep fashion dataset.
 Ensure that the weight file is located at "model/".
@@ -79,7 +79,7 @@ Ensure that the weight file is located at "model/".
 The testing cmd is: 
 ```
 
-python3 validation-kdeep.py --RUN test
+python3 validation-kdeep.py 
 
 ```
 
@@ -88,7 +88,7 @@ If you want to proceed with the new learning, adjust the parameters and set the 
 The Training cmd is:
 ```
 
-python3 training-kdeep.py --RUN test
+python3 training-kdeep.py 
 
 ```
 
