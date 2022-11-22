@@ -64,7 +64,7 @@ The install cmd is:
 ```
 conda create -n your_prjname python=3.8
 conda activate your_prjname
-cd {The virtual environment directory that you created}
+cd {Repo Directory}
 pip install -r requirements.txt
 ```
 - your_prjname : Name of the virtual environment to create
