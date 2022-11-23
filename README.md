@@ -43,14 +43,14 @@
 ### Build Docker Image
 ```
 # Build Docker Image
-sudo docker build -t graphrec:v1 .
+sudo docker build -t pinsage:v1 .
 # Check generated Docker Image
 sudo docker images
 ```
 
 ```
 # Run generated docker image
-sudo docker run graphrec:v1
+sudo docker run pinsage:v1
 ```
 
 <table>
