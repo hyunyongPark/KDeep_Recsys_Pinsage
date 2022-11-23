@@ -102,7 +102,22 @@ python3 training-kdeep.py
 ```
 
 
-### Result
+### Test Result
+- Reference Result Tables in Paper
+<table>
+    <thead>
+        <tr>
+            <td>HR@K(=500) Score</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_paper.PNG"/></td>
+        </tr>
+    </tbody>
+</table>
+
+
 - Our Model Performance Table
 
 |Embedding|Dataset|HR@K(=500)|
@@ -116,24 +131,6 @@ python3 training-kdeep.py
     <tbody>
         <tr>
             <td><img src=""/></td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-
-
-- Reference Result Tables in Paper
-<table>
-    <thead>
-        <tr>
-            <td>HR@K(=500) Score</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_paper.PNG"/></td>
         </tr>
     </tbody>
 </table>
