@@ -51,8 +51,7 @@ sudo docker run graphrec:v1
 
 
 ### Requirements
-
-- # python V  # 3.8.13
+- python V  # 3.8.13
 - dgl-cu113
 - tqdm
 - torch==1.9.0+cu111
