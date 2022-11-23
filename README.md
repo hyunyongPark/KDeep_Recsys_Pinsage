@@ -125,8 +125,7 @@ python3 training-kdeep.py
 |Embedding|Dataset|HR@K(=500)|
 |---|---|---|
 |Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*0.745*|
-|Graph|train(139,637)/valid(17,339)/test(17,936)|*0.*|
-|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**0.**|
+|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**0.728**|
 
 <table>
     </thead>
