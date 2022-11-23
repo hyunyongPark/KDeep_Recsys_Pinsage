@@ -123,8 +123,8 @@ python3 training-kdeep.py
 |Embedding|Dataset|HR@K(=500)|
 |---|---|---|
 |Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*0.745*|
-|Graph|train()/valid()/test()|*0.8357*|
-|Graph + Item meta|train()/valid()/test()|**0.7813**|
+|Graph|train()/valid()/test()|*0.*|
+|Graph + Item meta|train()/valid()/test()|**0.**|
 
 <table>
     </thead>
