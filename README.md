@@ -35,7 +35,7 @@ sudo docker images
 # Run generated docker image
 sudo docker run graphrec:v1
 ```
-- Result
+
 <table>
     <thead>
         <tr>
@@ -51,21 +51,20 @@ sudo docker run graphrec:v1
 
 
 ### Requirements
-```
-# python V  # 3.8.13
-dgl-cu113
-tqdm
-torch==1.9.0+cu111
-torchvision==0.10.0+cu111
-torchaudio==0.9.0
-torchtext==0.10.1
-dask
-partd
-pandas
-fsspec==0.3.3
-sklearn
 
-```
+- # python V  # 3.8.13
+- dgl-cu113
+- tqdm
+- torch==1.9.0+cu111
+- torchvision==0.10.0+cu111
+- torchaudio==0.9.0
+- torchtext==0.10.1
+- dask
+- partd
+- pandas
+- fsspec==0.3.3
+- sklearn
+
 
 
 
@@ -81,7 +80,7 @@ pip install -r requirements.txt
 - your_prjname : Name of the virtual environment to create
 
 
-### Trained weight file Download 
+##### Trained weight file Download 
 Download the trained weight file through the link below.
 This file is a trained file that learned the k-deep fashion dataset.
 Ensure that the weight file is located at "model/".
