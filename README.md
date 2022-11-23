@@ -23,6 +23,23 @@
     </tbody>
 </table>
 
+
+
+### Requirements
+- python V  # 3.8.13
+- dgl-cu113
+- tqdm
+- torch==1.9.0+cu111
+- torchvision==0.10.0+cu111
+- torchaudio==0.9.0
+- torchtext==0.10.1
+- dask
+- partd
+- pandas
+- fsspec==0.3.3
+- sklearn
+
+
 ### Build Docker Image
 ```
 # Build Docker Image
@@ -48,22 +65,6 @@ sudo docker run graphrec:v1
         </tr>
     </tbody>
 </table>
-
-
-### Requirements
-- python V  # 3.8.13
-- dgl-cu113
-- tqdm
-- torch==1.9.0+cu111
-- torchvision==0.10.0+cu111
-- torchaudio==0.9.0
-- torchtext==0.10.1
-- dask
-- partd
-- pandas
-- fsspec==0.3.3
-- sklearn
-
 
 
 
