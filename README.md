@@ -26,17 +26,19 @@
 
 
 ### Requirements
+Setting version based on cpu
 - python V  # 3.8.13
-- dgl-cu113
+- dgl==0.9.1
 - tqdm
-- torch==1.9.0+cu111
-- torchvision==0.10.0+cu111
-- torchaudio==0.9.0
+- torch==1.9.1
+- torchvision==0.10.1
+- torchaudio==0.9.1
 - torchtext==0.10.1
 - dask
 - partd
 - pandas
 - fsspec==0.3.3
+- scipy
 - sklearn
 
 
