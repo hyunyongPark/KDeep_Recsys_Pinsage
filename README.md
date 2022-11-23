@@ -26,8 +26,7 @@
 
 
 ### Requirements
-Setting version based on cpu
-- python V  # 3.8.13
+- python V  # python version : 3.8.13
 - dgl==0.9.1
 - tqdm
 - torch==1.9.1
