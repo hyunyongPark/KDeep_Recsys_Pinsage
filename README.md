@@ -123,9 +123,9 @@ python3 training-kdeep.py
 - Our Model Performance Table
 
 |Embedding|Dataset|HR@K(=500)|HR@K(=50)|HR@K(=10)|HR@K(=1)|
-|---|---|---|---|---|---|
-|Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*0.745*|*0*|*0*|*0*|
-|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**0.926**|*0.748*|*0*|*0*|
+|---|---|---|---|---|---|---|
+|Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*74.5%*|*0*|*0*|*0*|*0*|
+|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**92.6%**|**74.8%**|**0**|**11.1%**|**0**|
 
 <table>
     </thead>
