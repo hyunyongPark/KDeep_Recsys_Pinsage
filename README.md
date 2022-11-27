@@ -42,6 +42,8 @@
 
 
 ### Build Docker Image
+The Docker image shows the result of calculating the Hitrate at k=500 as shown in the original paper. 
+Based on the test data not used for training, the average of the subgraph embeddings of each user is obtained through the KNN algorithm, the distance from all items is obtained, the recommended list is obtained, and one of the labels not used for training is calculated as Hit.
 ```
 # Build Docker Image
 sudo docker build -t pinsage:v1 .
@@ -62,7 +64,7 @@ sudo docker run pinsage:v1
     </thead>
     <tbody>
         <tr>
-            <td><img src=""/></td>
+            <td><img src=""https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_k500.PNG""/></td>
         </tr>
     </tbody>
 </table>
@@ -124,14 +126,14 @@ python3 training-kdeep.py
 
 |Embedding|Dataset|HR@K(=500)|HR@K(=50)|HR@K(=30)|HR@K(=10)|
 |---|---|---|---|---|---|
-|Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*74.5%*|*0*|*0*|*0*|
-|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**92.6%**|**74.8%**|**49.6%**|**11.1%**|
+|Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*74.5%*|*54.8%*|*38.2%*|*11.3%*|
+|Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**92.6%**|**74.8%**|**49.6%**|**11.4%**|
 
 <table>
     </thead>
     <tbody>
         <tr>
-            <td><img src=""/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_k500.PNG"/></td>
         </tr>
     </tbody>
 </table>
