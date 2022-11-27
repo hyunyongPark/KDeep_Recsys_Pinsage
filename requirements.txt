@@ -1,0 +1,13 @@
+# python V  # 3.8.13
+dgl==0.9.1
+tqdm
+torch==1.9.1
+torchvision==0.10.1
+torchaudio==0.9.1
+torchtext==0.10.1
+dask
+partd
+pandas
+fsspec==0.3.3
+scipy
+scikit-learn
