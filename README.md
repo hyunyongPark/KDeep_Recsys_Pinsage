@@ -87,7 +87,7 @@ pip install -r requirements.txt
 Download the trained weight file through the link below.
 This file is a trained file that learned the k-deep fashion dataset.
 Ensure that the weight file is located at "model/".
-- https://drive.google.com/drive/folders/1tTCoCYQBNi-4dfTqwfa8LU6UJeTE41-r?usp=sharing
+- https://drive.google.com/file/d/1TAZXKww0UGUIYFP6Yl5LjdM2YgFlbVfE/view?usp=share_link
 
 The testing cmd is: 
 ```
