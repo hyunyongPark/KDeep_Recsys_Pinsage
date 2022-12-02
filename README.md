@@ -107,7 +107,7 @@ python3 training-kdeep.py
 
 
 ### Test Result
-- Reference Result Tables in Paper
+- Pinsage Reference Result Tables in Original Paper
 <table>
     <thead>
         <tr>
@@ -122,7 +122,7 @@ python3 training-kdeep.py
 </table>
 
 
-- Our Model Performance Table
+- Our Pinsage Model Performance Table
 
 |Embedding|Dataset|HR@K(=500)|HR@K(=50)|HR@K(=30)|
 |---|---|---|---|---|
@@ -134,6 +134,20 @@ python3 training-kdeep.py
     <tbody>
         <tr>
             <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_k500.PNG"/></td>
+        </tr>
+    </tbody>
+</table>
+
+- Example recommendations for Pinsage model's query items
+<table>
+    <thead>
+        <tr>
+            <td>K-Neareast Neighbors Result Score</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/example1.png"/></td>
         </tr>
     </tbody>
 </table>
