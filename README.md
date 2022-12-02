@@ -64,7 +64,7 @@ sudo docker run pinsage:v1
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_k500.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_K500.PNG"/></td>
         </tr>
     </tbody>
 </table>
@@ -145,7 +145,7 @@ python3 training-kdeep.py
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_k500.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_K500.PNG"/></td>
         </tr>
     </tbody>
 </table>
