@@ -104,6 +104,9 @@ The Training cmd is:
 python3 training-kdeep.py 
 
 ```
+
+At the time of learning, recall@10 was set to metric to update the validation reference score. The example is as follows.
+
 <table>
     <thead>
         <tr>
