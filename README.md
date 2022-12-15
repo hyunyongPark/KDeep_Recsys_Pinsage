@@ -157,7 +157,7 @@ At the time of learning, recall@10 was set to metric to update the validation re
 <table>
     <thead>
         <tr>
-            <td>K-Neareast Neighbors Result Score</td>
+            <td>K-Neareast Neighbors Result</td>
         </tr>
     </thead>
     <tbody>
