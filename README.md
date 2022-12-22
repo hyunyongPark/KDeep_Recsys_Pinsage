@@ -41,7 +41,7 @@
 - sklearn
 
 ### Unzip GraphData
-You must navigate to the "graph_data" folder and unzip the "kdata_entire8.zip" file. (Due to limited flag capacity)
+You must navigate to the "graph_data" folder and unzip the "kdata_entire8.zip" file. (Due to limited git capacity)
 ```
 cd graph_data
 unzip kdata_entire8.zip
