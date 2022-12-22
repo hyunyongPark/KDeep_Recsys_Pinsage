@@ -143,7 +143,7 @@ At the time of learning, recall@10 was set to metric to update the validation re
 |---|---|---|---|---|
 |Graph + Item meta|train(30,570)/valid(3,804)/test(3,910)|*74.5%*|*54.8%*|*38.2%*|
 |Graph + Item meta|train(139,637)/valid(17,339)/test(17,936)|**92.6%**|**74.8%**|**49.6%**|
-|Graph + Item meta|train(199,923)/valid(24,929)/test(25,645)|*80.1%*|*%*|*40.2%%*|
+|Graph + Item meta|train(199,923)/valid(24,929)/test(25,645)|*80.1%*|*%*|*40.2%*|
 
 <table>
     </thead>
