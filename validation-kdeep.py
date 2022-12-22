@@ -44,7 +44,7 @@ class PinSAGEModel(nn.Module):
 def load_model(data_dict, args):
     gnn = PinSAGEModel(data_dict['graph'], data_dict['item_ntype'], data_dict['textset'], args.hidden_dims, args.num_layers).to(args.device)
     #opt = torch.optim.Adam(gnn.parameters(), lr=args.lr)
-    checkpoint = torch.load(args.model_path + '.pt', map_location=args.device)
+    checkpoint = torch.load(args.model_path + '.pt', map_location="cuda:0")
     gnn.load_state_dict(checkpoint['model_state_dict'])
     
     return gnn
@@ -177,8 +177,8 @@ def valid(data_dict, args):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--dataset-path', type=str, default="graph_data/kdata_8.pkl")
-    parser.add_argument('-s', '--model-path', type=str, default="model/model_94epoch")
+    parser.add_argument('-d', '--dataset-path', type=str, default="graph_data/kdata_entire8.pkl")
+    parser.add_argument('-s', '--model-path', type=str, default="model/model_best")
     parser.add_argument('--random-walk-length', type=int, default=2)
     parser.add_argument('--random-walk-restart-prob', type=float, default=0.5)
     parser.add_argument('--num-random-walks', type=int, default=10)
@@ -186,30 +186,22 @@ if __name__ == '__main__':
     parser.add_argument('--num-layers', type=int, default=2)
     parser.add_argument('--hidden-dims', type=int, default=1024) # 128
     parser.add_argument('--batch-size', type=int, default=64)
-    parser.add_argument('--device', type=str, default='cpu')  # 'cpu' or 'cuda:N'
+    parser.add_argument('--device', type=str, default='cuda:0')  # 'cpu' or 'cuda:N'
     parser.add_argument('--num-workers', type=int, default=0)
     parser.add_argument('-k', type=int, default=500)
     args = parser.parse_args()
-
+    
     print('\033[94m' + f'----Training Environment----' + '\033[0m')
     info = platform.uname()
-    #print('OS                   :\t', platform.system())
-    #print('OS Version           :\t', platform.version())
-    #print('Process Architecture :\t', platform.machine())
-    #print('RAM Size             :\t',str(round(psutil.virtual_memory().total / (1024.0 **3)))+"(GB)")
-    #print(f"CPU : {info.processor}")
-    #print(f"python version {sys.version}")
-    #print(f"torch version {torch.__version__}")
-    
-    print('OS                   :\t', "Linux")
-    print("GPU : NVIDIA GeForce RTX 3090")
-    print('OS Version           :\t', "#54~20.04.1-Ubuntu SMP Thu Sep 1 16:17:26 UTC 2022")
-    print('Process Architecture :\t', "x86_64")
-    print('RAM Size             :\t', "252" + "(GB)")
-    print("CPU : x86_64")
-    print("GPU : NVIDIA GeForce RTX 3090")
-    print("python version 3.8.13 (default, Mar 28 2022, 11:38:47)")
-    print("torch version 1.9.1+cu111")
+    print('OS                   :\t', platform.system())
+    print('OS Version           :\t', platform.version())
+    print('Process information  :\t', platform.processor())
+    print('Process Architecture :\t', platform.machine())
+    print('RAM Size             :\t',str(round(psutil.virtual_memory().total / (1024.0 **3)))+"(GB)")
+    print(f"CPU : {info.processor}")
+    print(f"GPU : {torch.cuda.get_device_name(torch.cuda.current_device())}")
+    print(f"python version {sys.version}")
+    print(f"torch version {torch.__version__}")
     
     print();print()
     
@@ -224,15 +216,15 @@ if __name__ == '__main__':
     print(f"number of workers : {args.num_workers}")
     print(f"Number of K for verification : {args.k}")
     print("optimizer : Adam")
-    print("Epochs : 100")
+    print("Epochs : 200")
     print("batches per epoch : 10000")
     
     print();print()
     
     print('\033[94m' + f'----Ratio of datasets----' + '\033[0m')
-    print(f"Train Dataset : 139,637")
-    print(f"Validation Dataset : 17,339")
-    print(f"Test Dataset : 17,936")
+    print(f"Train Dataset : 199,923")
+    print(f"Validation Dataset : 24,929")
+    print(f"Test Dataset : 25,645")
     
     print();print()
     
