@@ -38,7 +38,7 @@
 - pandas
 - fsspec==0.3.3
 - scipy
-- sklearn
+- scikit-learn
 
 ### Unzip GraphData
 You must navigate to the "graph_data" folder and unzip the "kdata_entire8.zip" file. (Due to limited git capacity)
