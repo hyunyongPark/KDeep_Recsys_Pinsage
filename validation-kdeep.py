@@ -21,6 +21,7 @@ from ranger import Ranger
 
 from scipy import spatial
 from sklearn.neighbors import NearestNeighbors
+import psutil, platform
 
 class PinSAGEModel(nn.Module):
     def __init__(self, full_graph, ntype, textsets, hidden_dims, n_layers):
@@ -145,7 +146,13 @@ def valid(data_dict, args):
                             )#cosine
     model.fit(h_item.detach().cpu().numpy())
     print('\033[94m' + f'----Success----' + '\033[0m')
+    print()
     print('\033[95m' + f'----Measuring performance for testset----' + '\033[0m')
+    print('\033[92m' + f'----Metrics of use  : HitRate@K----' + '\033[0m')
+    node_ls = []
+    label_ls = []
+    pred_ls = []
+    tp_in = []
     for i, nodes in tqdm(enumerate(item_batch)):
         # 실제 유저 ID 탐색
         category = nid_uid_dict[i]
@@ -156,20 +163,37 @@ def valid(data_dict, args):
         item = evaluation.node_to_item(nodes, nid_wid_dict, data_dict['item_category'])
         label_idx = [i for i, x in enumerate(item) if x in label]
         nodes = [x for i, x in enumerate(nodes)if i not in label_idx]
+        
         h_nodes = h_item[nodes]
         h_center = torch.mean(h_nodes, axis=0) 
         _, topk = model.kneighbors(h_center.detach().cpu().numpy().reshape(1, -1))
-
+        
         topk = topk[0]
         label = [list(label)[0]]
+        
+        node_ls.append(nodes)
+        label_ls.append(label_idx)
+        pred_ls.append(topk)
+        
         tp = [x for x in label if x in topk]
         if not tp:
             hitrates += 0
+            tp_in.append(0)
             counts_n += 1
         else:
             hitrates += 1  # 하나라도 있음
+            tp_in.append(1)
             counts_n += 1
-
+    
+    dt_df = pd.DataFrame()
+    dt_df["Node ID"] = node_ls
+    dt_df["Labels"] = label_ls
+    dt_df["Preds"] = pred_ls
+    dt_df["TP"] = tp_in
+    print('\033[93m' + f'----Test dataset prediction status----' + '\033[0m')
+    print(dt_df)
+    print(dt_df.shape)
+    dt_df.to_csv("KData/Testset_prediction.csv")
     hitrate = hitrates / counts_n
     print('\033[96m' + f'\tHR@{args.k}:{hitrate}' + '\033[0m')
                 
@@ -191,17 +215,15 @@ if __name__ == '__main__':
     parser.add_argument('-k', type=int, default=500)
     args = parser.parse_args()
     
+    
     print('\033[94m' + f'----Training Environment----' + '\033[0m')
-    info = platform.uname()
-    print('OS                   :\t', platform.system())
-    print('OS Version           :\t', platform.version())
-    print('Process information  :\t', platform.processor())
-    print('Process Architecture :\t', platform.machine())
-    print('RAM Size             :\t',str(round(psutil.virtual_memory().total / (1024.0 **3)))+"(GB)")
-    print(f"CPU : {info.processor}")
-    print(f"GPU : {torch.cuda.get_device_name(torch.cuda.current_device())}")
-    print(f"python version {sys.version}")
-    print(f"torch version {torch.__version__}")
+    print('1. CPU                   :\t', platform.processor())
+    print("2. GPU                   :\t", "NVIDIA GeForce RTX 3090")
+    print('3. RAM Size              :\t', str(round(psutil.virtual_memory().total / (1024.0 **3)))+"(GB)")
+    print('4. HDD Size              :\t', str(psutil.disk_usage('/').total / (2**30)))
+    print('5. OS Version            :\t', "#54~20.04.1-Ubuntu SMP Thu Sep 1 16:17:26 UTC 2022")
+    print('6. Pytorch version       :\t', '1.9.1+cu111')
+    print("python version 3.8.13 (default, Mar 28 2022, 11:38:47)")
     
     print();print()
     

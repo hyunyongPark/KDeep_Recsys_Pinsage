@@ -57,7 +57,7 @@ def object_memory_reduce(data) :
     return data
 
 def load_dataset(args):
-    kdf = pd.read_excel(args.dataset_path, sheet_name='rawdata_2차(1118)', engine='openpyxl')
+    kdf = pd.read_excel(args.dataset_path, sheet_name='rawdata_최종(1129)-250497', engine='openpyxl')
     #kdf = kdf.rename(columns=kdf.iloc[0])
     #kdf = kdf.drop(kdf.index[0])
     print(f"Original Dataset Shape : {kdf.shape}")
@@ -364,7 +364,7 @@ def build_data(args):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset-path', type=str, default="KData/패션 선호도조사 결과_중간전달 data(1118).xlsx")
+    parser.add_argument('--dataset-path', type=str, default="KData/패션 선호도조사 결과_최종data(1129).xlsx")
     parser.add_argument('--save-path', type=str, default='KData')
     args = parser.parse_args()
 

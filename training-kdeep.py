@@ -213,7 +213,7 @@ def train(data_dict, args):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_8.pkl")
+    parser.add_argument('-d', '--dataset-path', type=str, default="./graph_data/kdata_entire8.pkl")
     parser.add_argument('-s', '--save-path', type=str, default='./model/model')
     parser.add_argument('--random-walk-length', type=int, default=2)
     parser.add_argument('--random-walk-restart-prob', type=float, default=0.5)
@@ -223,7 +223,7 @@ if __name__ == '__main__':
     parser.add_argument('--hidden-dims', type=int, default=1024) # 128
     parser.add_argument('--batch-size', type=int, default=64)
     parser.add_argument('--device', type=str, default='cuda:0')  # 'cpu' or 'cuda:N'
-    parser.add_argument('--num-epochs', type=int, default=80)
+    parser.add_argument('--num-epochs', type=int, default=200)
     parser.add_argument('--batches-per-epoch', type=int, default=10000)
     parser.add_argument('--num-workers', type=int, default=0)
     parser.add_argument('--lr', type=float, default=3e-5)
