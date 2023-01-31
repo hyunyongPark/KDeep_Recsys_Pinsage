@@ -70,7 +70,7 @@ sudo docker run pinsage:v1
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_K500_whole.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recsys_Pinsage/blob/main/img/test_code.PNG"/></td>
         </tr>
     </tbody>
 </table>
@@ -155,7 +155,7 @@ At the time of learning, recall@10 was set to metric to update the validation re
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/performance_K500_whole.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/KDeep_Recsys_Pinsage/blob/main/img/test_code.PNG"/></td>
         </tr>
     </tbody>
 </table>
